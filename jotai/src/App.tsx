@@ -6,6 +6,7 @@ import { DerivedDisplay } from "./components/DerivedDisplay";
 import { Temperature } from "./components/Temperature";
 import { CounterActions } from "./components/CounterActions";
 import { UserProfile } from "./components/UserProfile";
+import { Settings } from "./components/Settings";
 
 function App() {
   const [count, setCount] = useAtom(counterAtom);
@@ -38,6 +39,9 @@ function App() {
       <hr />
 
       <UserProfile />
+      <hr />
+
+      <Settings />
     </div>
   );
 }

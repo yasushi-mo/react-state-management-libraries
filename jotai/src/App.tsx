@@ -5,6 +5,7 @@ import { IncrementButton } from "./components/IncrementButton";
 import { DerivedDisplay } from "./components/DerivedDisplay";
 import { Temperature } from "./components/Temperature";
 import { CounterActions } from "./components/CounterActions";
+import { UserProfile } from "./components/UserProfile";
 
 function App() {
   const [count, setCount] = useAtom(counterAtom);
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <div>
+      {/* useAtom */}
       <div>
         <div>
           <h1>カウント: {count}</h1>
@@ -24,16 +26,18 @@ function App() {
           <Display />
           <IncrementButton />
         </div>
-        <hr />
-        <div>
-          <DerivedDisplay />
-        </div>
       </div>
+      <hr />
 
+      {/* derived atoms */}
       <div>
+        <DerivedDisplay />
         <Temperature />
         <CounterActions />
       </div>
+      <hr />
+
+      <UserProfile />
     </div>
   );
 }

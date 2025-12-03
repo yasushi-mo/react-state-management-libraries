@@ -7,6 +7,7 @@ import { Temperature } from "./components/Temperature";
 import { CounterActions } from "./components/CounterActions";
 import { UserProfile } from "./components/UserProfile";
 import { Settings } from "./components/Settings";
+import { TodoList } from "./components/TodoList";
 
 function App() {
   const [count, setCount] = useAtom(counterAtom);
@@ -38,10 +39,16 @@ function App() {
       </div>
       <hr />
 
+      {/* async */}
       <UserProfile />
       <hr />
 
+      {/* atomWithStorage */}
       <Settings />
+      <hr />
+
+      {/* TS */}
+      <TodoList />
     </div>
   );
 }
